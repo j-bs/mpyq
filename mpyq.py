@@ -260,6 +260,7 @@ class MPQArchive(object):
             f = open(filename, 'wb')
             f.write(data or b'')
             f.close()
+        os.chdir('..')
 
     def extract_files(self, *filenames):
         """Extract given files from the archive to disk."""
